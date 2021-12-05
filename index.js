@@ -28,7 +28,7 @@ const userschema = new mongoose.Schema({
 const User = new mongoose.model("usercollections", userschema);
 
 app.get("/",(req,res)=>{
-    res.send("server running")
+    res.send("server running sucessfully......")
 })
 
 //routes
@@ -48,9 +48,6 @@ app.post("/login", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.send("server running");
-});
 
 app.post("/register", (req, res) => {
   const { name, email, password,reEnterpassword } = req.body;
